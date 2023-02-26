@@ -38,39 +38,56 @@ body
     height: 80px
     width: 85%
     margin: auto
+    position: relative
     .header__logo
         height: 19px
     .header__nav
-        width: 60%
-        min-height: 20px
+        width: 65%
+        min-height: 30px
         @include flex(flex, space-between, center, row)
         .header__nav__item
+            transition-duration: 0.3s
             @include font(Inter, 400, 18px, 22px,rgba(75, 75, 75, 1),center)
-            &:nth-child(1)
-                font-weight: 500
+            &:hover
                 color: $black
+                background: $grey
+                transition-duration: 0.3s
         .header__nav__item::any-link
             text-decoration: none !important
     .header__wrapper
         // @include flex(flex, flex-end, center, row)
-        width: 10%
+        width: 5%
         position: relative
         .header__wrapper__cart
             height: 30px
         .header__wrapper__menu
             height: 10px
             float: right
-        &::after
-            content: ""
-            display: block
-            position: absolute
-            height: 100px
-            width: 100px
-            background: red
-            top: 30px
-            right: 0px
-            z-index: 4
-        // transition-duration: .3s !important
+    .header__nav__popup__menu
+        min-height: 100px
+        width: 20%
+        background: $white
+        border: 3px solid $blue
+        position: absolute
+        top: -300px
+        right: 0px
+        @include flex(flex, space-between, flex-end, column)
+        .header__nav__popup__menu__close
+            width: 100%
+            text-align: end
+        .header__nav__item__popup__menu
+            transition-duration: 0.3s
+            width: 100%
+            cursor: pointer
+            padding: 10px
+            @include flex(flex, space-between, flex-end, column)
+            @include font(Inter, 400, 18px, 22px,rgba(75, 75, 75, 1),center)
+            &:hover
+                color: $black
+                background: $grey
+                transition-duration: 0.3s
+.header__wrapper__menu_active
+    top: 70px !important
 .line
     margin: auto
     background: rgba(92, 92, 92, 1)
@@ -687,22 +704,6 @@ body
 @media screen and (max-width: 1100px)
     .header__nav
         display: none !important
-    .header__wrapper__menu
-        position: relative
-        z-index: 3
-    .header__wrapper__menu::after
-        content: "" !important
-        display: block !important
-        // transition-duration: .3s !important
-        position: absolute !important
-        height: 100px !important
-        width: 100px !important
-        background: red !important
-        top: 20px !important
-        left: -100px
-        z-index: 4 !important
-    .header__wrapper
-        width: 20% !important
     .mainsection
         height: 500px !important
         .mainsection__info
@@ -1137,8 +1138,6 @@ body
                 .footer__block__listitem
                     margin-bottom: -10px !important
 @media screen and (max-width: 550px)
-    .header__wrapper
-        width: 30% !important
     .mainsection
         height: 300px !important
         .mainsection__heading
