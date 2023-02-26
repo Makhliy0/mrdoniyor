@@ -40,10 +40,6 @@ body
     margin: auto
     .header__logo
         height: 19px
-        transition-duration: 0.5s
-        &:hover
-            filter: drop-shadow(0px 10px 10px $blue)
-            transition-duration: 0.5s
     .header__nav
         width: 60%
         min-height: 20px
@@ -93,10 +89,6 @@ body
             background: $purple
             text-transform: uppercase
             margin: auto
-            transition-duration: 0.5s
-            &:hover
-                filter: drop-shadow(0px 10px 30px $purple)
-                transition-duration: 0.5s
         .mainsection__wrapper__button2
             width: 45%
             margin: auto
@@ -105,11 +97,6 @@ body
             @include font(Druk Wide, 700, 20px, 26px, $black, center)
             background: $white
             text-transform: uppercase
-            transition-duration: 0.5s
-            &:hover
-                filter: drop-shadow(0px 10px 30px $white)
-                transition-duration: 0.5s
-
 .presentation
     min-height: 1800px
     background: $black
@@ -155,10 +142,6 @@ body
                 display: block
                 @include font(Druk Wide, 700, 14px, 18px, $white, left)
                 text-transform: uppercase
-                transition-duration: 0.5s
-                &:hover
-                    filter: drop-shadow(0 10px 30px $white)
-                    transition-duration: 0.5s
         .presentation__wedo__blocks
             @include flex(flex, space-around, flex-start, row)
             flex-wrap: wrap
@@ -170,8 +153,6 @@ body
                 @include flex(flex, space-around, flex-start, column)
                 .presentation__wedo__block1__text
                     @include font (Inter, 400, 18px, 34px, $white, left)
-                    z-index: 10
-                    // margin-bottom: 110%
                     margin-top: -100%
                 .presentation__wedo__block
                     background: $blue
@@ -206,14 +187,14 @@ body
     .presentation__whoweare
         width: 85%
         margin: auto
-        z-index: -10
+        // z-index: -10
         .presentation__whoweare__heading
             @include font(Druk Wide, 700, 40px, 52px, $white, left)
             text-transform: uppercase
         .presentation__whoweare__wrapper
             @include flex(flex, space-between, flex-end, row)
             position: relative
-            z-index: 111
+            z-index: 1
             &::before
                 content: ""
                 position: absolute
@@ -226,11 +207,6 @@ body
                 display: block
             .presentation__whoweare__wrapper__img
                 width: 490px
-                transition-duration: 0.5s
-                &:hover
-                    border-radius: 100px
-                    transition-duration: 0.5s
-                    filter: drop-shadow(0px 10px 30px $green)
             .presentation__whoweare__wrapper__textblock
                 width: 45%
                 .presentation__whoweare__wrapper__textblock__text1
@@ -246,10 +222,38 @@ body
                     background: transparent
                     border: 1px solid $white
                     text-transform: uppercase
-                    transition-duration: 0.5s
+                    position: relative
+                    z-index: 3
+                    overflow: hidden
                     &:hover
-                        transition-duration: 0.5s
-                        filter: drop-shadow(0 10px 30px $white)
+                        transition-delay: 0.1s
+                        color: $black !important
+                        cursor: pointer
+                        border: 1px solid $black
+                    &:hover::after
+                        left: 0
+                    &:hover::before
+                        right: 0
+                    &::after
+                        content: ''
+                        position: absolute
+                        height: 100%
+                        top: 0
+                        transition-duration: .3s
+                        left: -100%
+                        width: 50%
+                        background: $white !important
+                        z-index: -2
+                    &::before
+                        background: $white !important
+                        content: ''
+                        position: absolute
+                        height: 100%
+                        transition-duration: .3s
+                        top: 0
+                        right: -100%
+                        width: 50%
+                        z-index: -2
 
 .selectedprojects
     width: 85%
@@ -290,10 +294,39 @@ body
                 background: $green
                 border: 1px solid $black
                 text-transform: uppercase
-                transition-duration: 0.5s
+                position: relative
+                z-index: 3
+                overflow: hidden
                 &:hover
-                    filter: drop-shadow(0 10px 30px $black)
-                    transition-duration: 0.5s
+                    transition-delay: 0.1s
+                    color: $green !important
+                    cursor: pointer
+                    border: 1px solid $black
+                &:hover::after
+                    left: 0
+                &:hover::before
+                    right: 0
+                &::after
+                    content: ''
+                    position: absolute
+                    height: 100%
+                    top: 0
+                    transition-duration: .3s
+                    left: -100%
+                    width: 50%
+                    background: $black !important
+                    z-index: -1
+                &::before
+                    background: $black!important
+                    content: ''
+                    position: absolute
+                    height: 100%
+                    transition-duration: .3s
+                    top: 0
+                    right: -100%
+                    width: 50%
+                    z-index: -1
+
         .selectedprojects__pictures1
             width: 465px
             height: 500px
@@ -312,26 +345,14 @@ body
         .selectedprojects__pictures__addimg
             transform: translate(325px, 220px)
             max-height: 240px
-            transition-duration: 0.5s
-            &:hover
-                height: 100%
-                max-height: 100%
-                transition-duration: 0.5s
-                transform: translate(0px,0px)
         .selectedprojects__pictures__img
             transform: translate(-90px, 220px)
             max-height: 240px
-            transition-duration: 0.5s
-            &:hover
-                height: 100%
-                transition-duration: 0.5s
-                max-height: 100%
-                transform: translate(0px,0px)
 .ourclients
     background: $black
     padding-top: 100px
     padding-bottom: 100px
-    z-index: -10
+    z-index: -1
     .ourclients__name
         @include font(Druk Wide, 700, 56px, 52px, $white, center)
         text-transform: uppercase
@@ -350,7 +371,7 @@ body
         .ourclients__wrapper__imgblock
             width: 50%
             margin-top: 50px
-            z-index: 11
+            z-index: 1
             position: relative
             &::before
                 content: ''
@@ -359,7 +380,7 @@ body
                 background-repeat: no-repeat
                 background-size: contain
                 background-image: url('../assets/pics/ourclientdots.png')
-                z-index: -10
+                z-index: -1
                 position: absolute
                 left: -45px
                 top: -40px
@@ -370,19 +391,14 @@ body
                 background-repeat: no-repeat
                 background-size: contain
                 background-image: url('../assets/pics/ourclientcomma.png')
-                z-index: 12
+                z-index: 2
                 position: absolute
                 right: -10px
                 top: -35px
             .ourclients__wrapper__imgblock__avatar
-                z-index: 11
+                z-index: 1
                 width: 100%
                 margin: auto
-                transition-duration: 0.5s
-                &:hover
-                    border-radius: 100px
-                    filter: drop-shadow(0px 10px 30px $green)
-                    transition-duration: 0.5s
             .ourclients__wrapper__imgblock__arrowwrapper
                 width: 100%
                 margin-top: 50px
@@ -447,22 +463,30 @@ body
                     @include font (Inter, 400, 18px, 34px, $white, left)
     .ourclients__ourarticles__search
         .ourclients__ourarticles__search__form
-            width: 100%
+            width: 80%
             text-align: center
             height: 70px
+            @include flex(flex, space-between, center, row)
+            margin: auto
             .ourclients__ourarticles__search__form__input
                 height: 100%
-                width: 80%
-                margin: auto
+                width: 70%
                 color: $green
                 font-size: 30px
-                background: $black
-                border: 5px solid $green
+                background: transparent
+                border: 3px solid $green
                 padding: 2%
                 outline: none
-            .ourclients__ourarticles__search__form__input::placeholder
-                color: $green
-                opacity: 20%
+                &::placeholder
+                    color: $green
+                    opacity: 20%
+            .ourclients__ourarticles__search__form__button
+                height: 60%
+                width: 20%
+                color: $black
+                font-size: 20px
+                background: $green
+                border: 1px solid $green
 .footer
     @include flex(flex, space-between, flex-start, row)
     flex-wrap: wrap
@@ -474,11 +498,6 @@ body
         margin-right: 150px
         .footer__block1__company
             margin-bottom: 10%
-            .footer__block1__company__logo
-                transition-duration: 0.5s
-                &:hover
-                    transition-duration: 0.5s
-                    filter: drop-shadow(0px 10px 20px $blue) !important
             .footer__block1__company__info
                 @include font(Inter, 400, 18px, 33px,$grey,left)
         .footer__block1__socials
@@ -641,19 +660,11 @@ body
             margin-left: 20px !important
             background-size: contain !important
             background-repeat: no-repeat !important
-            transition-duration: 0.5s !important
-            &:hover
-                border-radius: 70px !important
-                filter: drop-shadow(0px 10px 30px $white) !important
         .selectedprojects__pictures__addimg,
         .selectedprojects__pictures__img
             transform: translate(150%, 0px) !important
             max-height: 376px !important
             width: 100% !important
-            transition-duration: 0.5s !important
-            &:hover
-                border-radius: 70px !important
-                filter: drop-shadow(0px 10px 30px $white) !important
     .articles
         .ourclients__ourarticles
             .ourclients__ourarticles__wrapper
