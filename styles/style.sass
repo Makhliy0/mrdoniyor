@@ -23,7 +23,7 @@ $green: rgba(204, 254, 15, 1)
 $purple: rgba(163, 10, 242, 1)
 $black: rgba(17, 17, 17, 1)
 $blue: rgba(0, 87, 255, 1)
-$red: #ff0000
+$redd: #ff0000
 $blackk: #000000
 *
     padding: 0
@@ -63,6 +63,7 @@ body
         .header__wrapper__menu
             height: 10px
             float: right
+            display: none
     .header__nav__popup__menu
         min-height: 100px
         width: 20%
@@ -452,7 +453,7 @@ body
     background: $black
     padding-top: 100px
     padding-bottom: 100px
-    z-index: -10
+    // z-index: -10
     min-height: 100px
     .ourclients__ourarticles
         padding-top: 50px
@@ -493,7 +494,6 @@ body
     .ourclients__ourarticles__search
         .ourclients__ourarticles__search__form
             width: 80%
-            text-align: center
             height: 70px
             @include flex(flex, space-between, center, row)
             margin: auto
@@ -516,6 +516,37 @@ body
                 font-size: 20px
                 background: $green
                 border: 1px solid $green
+                // position: relative
+                // z-index: 3
+                // overflow: hidden
+                // &:hover
+                //     transition-delay: 0.1s
+                //     color: red !important
+                //     cursor: pointer
+                // &:hover::after
+                //     left: 0 !important
+                // &:hover::before
+                //     right: 0 !important
+                // &::after
+                //     content: ''
+                //     position: absolute
+                //     height: 100%
+                //     top: 0
+                //     transition-duration: .3s
+                //     left: -100%
+                //     width: 50%
+                //     background: $black
+                //     z-index: -1
+                // &::before
+                //     background: $black
+                //     content: ''
+                //     position: absolute
+                //     height: 100%
+                //     transition-duration: .3s
+                //     top: 0
+                //     right: -100%
+                //     width: 50%
+                //     z-index: -1
 .footer
     @include flex(flex, space-between, flex-start, row)
     flex-wrap: wrap
@@ -704,6 +735,8 @@ body
 @media screen and (max-width: 1100px)
     .header__nav
         display: none !important
+    .header__wrapper__menu
+        display: block !important
     .mainsection
         height: 500px !important
         .mainsection__info
