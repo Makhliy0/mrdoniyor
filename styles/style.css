@@ -66,6 +66,7 @@ body {
 .header .header__wrapper .header__wrapper__menu {
   height: 10px;
   float: right;
+  display: none;
 }
 .header .header__nav__popup__menu {
   min-height: 100px;
@@ -806,42 +807,6 @@ body {
   font-size: 20px;
   background: rgb(204, 254, 15);
   border: 1px solid rgb(204, 254, 15);
-  position: relative;
-  z-index: 3;
-  overflow: hidden;
-}
-.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button:hover {
-  transition-delay: 0.1s;
-  color: red !important;
-  cursor: pointer;
-}
-.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button:hover::after {
-  left: 0 !important;
-}
-.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button:hover::before {
-  right: 0 !important;
-}
-.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  transition-duration: 0.3s;
-  left: -100%;
-  width: 50%;
-  background: rgb(17, 17, 17);
-  z-index: -1;
-}
-.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button::before {
-  background: rgb(17, 17, 17);
-  content: "";
-  position: absolute;
-  height: 100%;
-  transition-duration: 0.3s;
-  top: 0;
-  right: -100%;
-  width: 50%;
-  z-index: -1;
 }
 
 .footer {
@@ -1103,6 +1068,9 @@ body {
 @media screen and (max-width: 1100px) {
   .header__nav {
     display: none !important;
+  }
+  .header__wrapper__menu {
+    display: block !important;
   }
   .mainsection {
     height: 500px !important;
