@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: rgb(204, 254, 15);
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -45,12 +41,12 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: rgb(75, 75, 75);
+  color: white;
   text-align: center;
 }
 .header .header__nav .header__nav__item:hover {
-  color: rgb(17, 17, 17);
-  background: rgb(75, 75, 75);
+  color: red;
+  background: white;
   transition-duration: 0.3s;
 }
 .header .header__nav .header__nav__item::any-link {
@@ -71,7 +67,7 @@ body {
 .header .header__nav__popup__menu {
   min-height: 100px;
   width: 20%;
-  background: rgba(255, 255, 255, 0.9);
+  background: black;
   border: 3px solid rgb(0, 87, 255);
   position: absolute;
   top: -300px;
@@ -102,8 +98,8 @@ body {
   text-align: center;
 }
 .header .header__nav__popup__menu .header__nav__item__popup__menu:hover {
-  color: rgb(17, 17, 17);
-  background: rgb(75, 75, 75);
+  color: red;
+  background: white;
   transition-duration: 0.3s;
 }
 
@@ -135,7 +131,7 @@ body {
   font-weight: 700;
   font-size: 56px;
   line-height: 73px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -153,11 +149,11 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: center;
   height: 100px;
   border: 0px;
-  background: rgb(163, 10, 242);
+  background: white;
   text-transform: uppercase;
   margin: auto;
 }
@@ -170,15 +166,14 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: black;
   text-transform: uppercase;
 }
 
 .presentation {
   min-height: 1800px;
-  background: rgb(17, 17, 17);
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -199,7 +194,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: center;
   text-transform: uppercase;
   padding-left: 15px;
@@ -219,7 +214,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left2;
 }
 .presentation .presentation__star {
@@ -243,7 +238,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   text-transform: uppercase;
 }
@@ -253,7 +248,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   text-transform: uppercase;
 }
@@ -279,7 +274,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   margin-top: -100%;
 }
@@ -291,8 +286,8 @@ body {
   height: 384px;
   width: 350px;
   padding: 73px 42px 73px 42px;
-  background: rgb(17, 17, 17);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: red;
+  border: 1px solid black;
   margin-top: 20px;
   transition-duration: 0.5s;
   margin-bottom: 50px !important;
@@ -307,7 +302,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   text-transform: uppercase;
 }
@@ -316,7 +311,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   padding-top: 10%;
   text-transform: uppercase;
@@ -327,7 +322,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .presentation .presentation__wedo .presentation__wedo__arrowwrapper {
@@ -337,13 +332,14 @@ body {
 .presentation .presentation__whoweare {
   width: 85%;
   margin: auto;
+  background: red;
 }
 .presentation .presentation__whoweare .presentation__whoweare__heading {
   font-family: Druk Wide;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   text-transform: uppercase;
 }
@@ -377,7 +373,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 5%;
@@ -388,7 +384,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
@@ -396,11 +392,11 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: center;
   width: 50%;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
@@ -408,9 +404,9 @@ body {
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button:hover {
   transition-delay: 0.1s;
-  color: rgb(17, 17, 17) !important;
+  color: red !important;
   cursor: pointer;
-  border: 1px solid rgb(17, 17, 17);
+  border: 1px solid red;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button:hover::after {
   left: 0;
@@ -426,11 +422,11 @@ body {
   transition-duration: 0.3s;
   left: -100%;
   width: 50%;
-  background: rgba(255, 255, 255, 0.9) !important;
+  background: black !important;
   z-index: -2;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button::before {
-  background: rgba(255, 255, 255, 0.9) !important;
+  background: black !important;
   content: "";
   position: absolute;
   height: 100%;
@@ -454,7 +450,7 @@ body {
   font-weight: 700;
   font-size: 56px;
   line-height: 52px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: center;
 }
 .selectedprojects .selectedprojects__wrapper {
@@ -477,7 +473,7 @@ body {
   font-weight: 700;
   font-size: 100px;
   line-height: 52px;
-  color: rgb(75, 75, 75);
+  color: white;
   text-align: left;
   opacity: 12%;
   transition-duration: 0.5s;
@@ -493,7 +489,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: left;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textblock__info {
@@ -502,7 +498,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgb(75, 75, 75);
+  color: white;
   text-align: left;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button {
@@ -510,11 +506,11 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 44px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: center;
   width: 50%;
-  background: rgb(204, 254, 15);
-  border: 1px solid rgb(17, 17, 17);
+  background: black;
+  border: 1px solid red;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
@@ -522,9 +518,9 @@ body {
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button:hover {
   transition-delay: 0.1s;
-  color: rgb(204, 254, 15) !important;
+  color: black !important;
   cursor: pointer;
-  border: 1px solid rgb(17, 17, 17);
+  border: 1px solid red;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button:hover::after {
   left: 0;
@@ -540,11 +536,11 @@ body {
   transition-duration: 0.3s;
   left: -100%;
   width: 50%;
-  background: rgb(17, 17, 17) !important;
+  background: red !important;
   z-index: -1;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button::before {
-  background: rgb(17, 17, 17) !important;
+  background: red !important;
   content: "";
   position: absolute;
   height: 100%;
@@ -582,7 +578,7 @@ body {
 }
 
 .ourclients {
-  background: rgb(17, 17, 17);
+  background: red;
   padding-top: 100px;
   padding-bottom: 100px;
   z-index: -1;
@@ -592,13 +588,13 @@ body {
   font-weight: 700;
   font-size: 56px;
   line-height: 52px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: center;
   text-transform: uppercase;
 }
 .ourclients .line {
   margin: auto;
-  background: rgb(75, 75, 75);
+  background: white;
   height: 0.5px;
   width: 85%;
   border: 0px;
@@ -663,7 +659,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__info {
@@ -672,7 +668,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__nameclient {
@@ -682,7 +678,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
@@ -691,12 +687,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 
 .articles {
-  background: rgb(17, 17, 17);
+  background: red;
   padding-top: 100px;
   padding-bottom: 100px;
   min-height: 100px;
@@ -719,7 +715,7 @@ body {
   font-weight: 700;
   font-size: 50px;
   line-height: 66px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .articles .ourclients__ourarticles .ourclients__ourarticles__headwrapper .ourclients__ourarticles__headwrapper__link {
@@ -729,7 +725,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper {
@@ -761,7 +757,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 33px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__info {
@@ -770,7 +766,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-align: left;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form {
@@ -785,28 +781,28 @@ body {
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input {
   height: 100%;
   width: 70%;
-  color: rgb(204, 254, 15);
+  color: black;
   font-size: 30px;
   background: transparent;
-  border: 3px solid rgb(204, 254, 15);
+  border: 3px solid black;
   padding: 2%;
   outline: none;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input::-moz-placeholder {
-  color: rgb(204, 254, 15);
+  color: black;
   opacity: 20%;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input::placeholder {
-  color: rgb(204, 254, 15);
+  color: black;
   opacity: 20%;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button {
   height: 60%;
   width: 20%;
-  color: rgb(17, 17, 17);
+  color: red;
   font-size: 20px;
-  background: rgb(204, 254, 15);
-  border: 1px solid rgb(204, 254, 15);
+  background: black;
+  border: 1px solid black;
 }
 
 .footer {
@@ -831,7 +827,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: rgb(75, 75, 75);
+  color: white;
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials {
@@ -847,7 +843,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials .footer__block1__socials__wrapper {
@@ -871,7 +867,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: left;
 }
 .footer .footer__block .footer__block__list {
@@ -882,7 +878,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: rgb(75, 75, 75);
+  color: white;
   text-align: left;
 }
 .footer .footer__bottom {
@@ -893,7 +889,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: rgb(17, 17, 17);
+  color: red;
   text-align: center;
 }
 
@@ -981,7 +977,7 @@ body {
   }
   .ourclients__wrapper .ourclients__wrapper__textblock {
     width: 100% !important;
-    background: rgb(204, 254, 15) !important;
+    background: black !important;
     min-height: 280px !important;
     padding: 35px 45px 35px 45px !important;
     transition-duration: 0.5s;
@@ -993,20 +989,20 @@ body {
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__title {
     margin-bottom: 3% !important;
     font-size: 20px !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__info {
     margin-bottom: 3% !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     font-size: 19px !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__nameclient {
     margin-bottom: 0% !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     font-size: 15px !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     font-size: 15px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
@@ -1099,7 +1095,7 @@ body {
     width: 350px !important;
   }
   .presentation__whoweare__wrapper__textblock {
-    background: rgb(204, 254, 15) !important;
+    background: black !important;
     width: 100% !important;
     min-height: 220px !important;
     padding: 20px 30px 20px 30px !important;
@@ -1107,23 +1103,23 @@ body {
   }
   .presentation__whoweare__wrapper__textblock:hover {
     transition-duration: 0.5s;
-    filter: drop-shadow(0px 10px 30px rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(0px 10px 30px black);
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__text1 {
     font-size: 20px !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     margin-bottom: 1% !important;
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__text2 {
     font-size: 13px !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     margin-bottom: 1% !important;
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
-    border: 1px solid rgb(17, 17, 17) !important;
+    border: 1px solid red !important;
     margin-bottom: 20px !important;
     min-width: 50% !important;
-    color: rgb(17, 17, 17) !important;
+    color: red !important;
     font-size: 20px !important;
   }
   .selectedprojects .selectprojects__name {

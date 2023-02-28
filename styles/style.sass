@@ -23,8 +23,6 @@ $green: rgba(204, 254, 15, 1)
 $purple: rgba(163, 10, 242, 1)
 $black: rgba(17, 17, 17, 1)
 $blue: rgba(0, 87, 255, 1)
-$redd: #ff0000
-$blackk: #000000
 *
     padding: 0
     text-decoration: none
@@ -32,7 +30,8 @@ $blackk: #000000
     margin: 0
     box-sizing: border-box
 body
-    background: $green
+    // background: $green
+
 .header
     @include flex(flex, space-between, center, row)
     height: 80px
@@ -47,7 +46,7 @@ body
         @include flex(flex, space-between, center, row)
         .header__nav__item
             transition-duration: 0.3s
-            @include font(Inter, 400, 18px, 22px,rgba(75, 75, 75, 1),center)
+            @include font(Inter, 400, 18px, 22px, $grey ,center)
             &:hover
                 color: $black
                 background: $grey
@@ -218,6 +217,7 @@ body
         width: 85%
         margin: auto
         // z-index: -10
+        background: red
         .presentation__whoweare__heading
             @include font(Druk Wide, 700, 40px, 52px, $white, left)
             text-transform: uppercase
