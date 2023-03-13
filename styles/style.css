@@ -6,12 +6,27 @@
   font-family: Inter;
   src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   padding: 0;
   text-decoration: none;
   color: black;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #010000;
 }
 
 .header {
@@ -41,12 +56,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: white;
+  color: #F72B1C;
   text-align: center;
 }
 .header .header__nav .header__nav__item:hover {
-  color: red;
-  background: white;
+  color: #850900;
   transition-duration: 0.3s;
 }
 .header .header__nav .header__nav__item::any-link {
@@ -67,7 +81,7 @@
 .header .header__nav__popup__menu {
   min-height: 100px;
   width: 20%;
-  background: black;
+  background: rgba(255, 255, 255, 0.9);
   border: 3px solid rgb(0, 87, 255);
   position: absolute;
   top: -300px;
@@ -98,8 +112,8 @@
   text-align: center;
 }
 .header .header__nav__popup__menu .header__nav__item__popup__menu:hover {
-  color: red;
-  background: white;
+  color: #010000;
+  background: rgb(75, 75, 75);
   transition-duration: 0.3s;
 }
 
@@ -131,7 +145,7 @@
   font-weight: 700;
   font-size: 56px;
   line-height: 73px;
-  color: red;
+  color: #F72B1C;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -149,11 +163,11 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: black;
+  color: #010000;
   text-align: center;
   height: 100px;
   border: 0px;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   text-transform: uppercase;
   margin: auto;
 }
@@ -161,19 +175,20 @@
   width: 45%;
   margin: auto;
   height: 100px;
-  border: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   font-family: Druk Wide;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: red;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  background: black;
+  background: transparent;
   text-transform: uppercase;
 }
 
 .presentation {
   min-height: 1800px;
+  background: #010000;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -194,7 +209,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
   text-transform: uppercase;
   padding-left: 15px;
@@ -214,12 +229,16 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left2;
 }
 .presentation .presentation__star {
   margin-left: 60%;
   margin-top: 20px;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .presentation .presentation__wedo {
   width: 85%;
@@ -238,9 +257,10 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   text-transform: uppercase;
+  color: #F72B1C;
 }
 .presentation .presentation__wedo .presentation__wedo__headwrapper .presentation__wedo__headwrapper__text2 {
   display: block;
@@ -248,7 +268,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   text-transform: uppercase;
 }
@@ -274,9 +294,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   margin-top: -100%;
+  color: #F72B1C;
 }
 .presentation .presentation__wedo .presentation__wedo__blocks .presentation__wedo__block1 .presentation__wedo__block {
   background: rgb(0, 87, 255);
@@ -286,14 +307,14 @@
   height: 384px;
   width: 350px;
   padding: 73px 42px 73px 42px;
-  background: red;
-  border: 1px solid black;
+  background: #010000;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   margin-top: 20px;
   transition-duration: 0.5s;
   margin-bottom: 50px !important;
 }
 .presentation .presentation__wedo .presentation__wedo__blocks .presentation__wedo__block1 .presentation__wedo__block:hover {
-  background: rgb(0, 87, 255) !important;
+  background: #F72B1C !important;
   transform: translateY(100px);
   transition-duration: 0.5s;
 }
@@ -302,7 +323,7 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   text-transform: uppercase;
 }
@@ -311,7 +332,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   padding-top: 10%;
   text-transform: uppercase;
@@ -322,7 +343,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .presentation .presentation__wedo .presentation__wedo__arrowwrapper {
@@ -332,14 +353,13 @@
 .presentation .presentation__whoweare {
   width: 85%;
   margin: auto;
-  background: red;
 }
 .presentation .presentation__whoweare .presentation__whoweare__heading {
   font-family: Druk Wide;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: black;
+  color: #F72B1C;
   text-align: left;
   text-transform: uppercase;
 }
@@ -356,7 +376,7 @@
   position: absolute;
   height: 100px;
   width: 100px;
-  background: rgb(167, 255, 98);
+  background: rgba(255, 255, 255, 0.9);
   left: -47px;
   bottom: -47px;
   z-index: -9;
@@ -373,7 +393,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: black;
+  color: #F72B1C;
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 5%;
@@ -384,7 +404,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
@@ -392,11 +412,11 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: black;
+  color: #F72B1C;
   text-align: center;
   width: 50%;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid #F72B1C;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
@@ -404,9 +424,9 @@
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button:hover {
   transition-delay: 0.1s;
-  color: red !important;
+  color: #010000 !important;
   cursor: pointer;
-  border: 1px solid red;
+  border: 1px solid #010000;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button:hover::after {
   left: 0;
@@ -422,11 +442,11 @@
   transition-duration: 0.3s;
   left: -100%;
   width: 50%;
-  background: black !important;
+  background: #F72B1C !important;
   z-index: -2;
 }
 .presentation .presentation__whoweare .presentation__whoweare__wrapper .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button::before {
-  background: black !important;
+  background: #F72B1C !important;
   content: "";
   position: absolute;
   height: 100%;
@@ -450,7 +470,7 @@
   font-weight: 700;
   font-size: 56px;
   line-height: 52px;
-  color: red;
+  color: #F72B1C;
   text-align: center;
 }
 .selectedprojects .selectedprojects__wrapper {
@@ -473,14 +493,14 @@
   font-weight: 700;
   font-size: 100px;
   line-height: 52px;
-  color: white;
+  color: #F72B1C;
   text-align: left;
-  opacity: 12%;
+  opacity: 70%;
   transition-duration: 0.5s;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textblock__number:hover {
   transition-duration: 0.5s;
-  opacity: 50% !important;
+  opacity: 300% !important;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textblock__name {
   padding-bottom: 5%;
@@ -489,7 +509,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: red;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textblock__info {
@@ -498,7 +518,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button {
@@ -506,11 +526,12 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 44px;
-  color: red;
+  color: #F72B1C;
   text-align: center;
   width: 50%;
-  background: black;
-  border: 1px solid red;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid #F72B1C;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
@@ -518,9 +539,8 @@
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button:hover {
   transition-delay: 0.1s;
-  color: black !important;
+  color: #010000 !important;
   cursor: pointer;
-  border: 1px solid red;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button:hover::after {
   left: 0;
@@ -536,11 +556,11 @@
   transition-duration: 0.3s;
   left: -100%;
   width: 50%;
-  background: red !important;
+  background: #F72B1C !important;
   z-index: -1;
 }
 .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textnlock__button::before {
-  background: red !important;
+  background: #F72B1C !important;
   content: "";
   position: absolute;
   height: 100%;
@@ -578,7 +598,7 @@
 }
 
 .ourclients {
-  background: red;
+  background: #010000;
   padding-top: 100px;
   padding-bottom: 100px;
   z-index: -1;
@@ -588,13 +608,13 @@
   font-weight: 700;
   font-size: 56px;
   line-height: 52px;
-  color: black;
+  color: #F72B1C;
   text-align: center;
   text-transform: uppercase;
 }
 .ourclients .line {
   margin: auto;
-  background: white;
+  background: rgb(75, 75, 75);
   height: 0.5px;
   width: 85%;
   border: 0px;
@@ -659,7 +679,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 44px;
-  color: black;
+  color: #F72B1C;
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__info {
@@ -668,7 +688,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__nameclient {
@@ -678,7 +698,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  color: black;
+  color: #F72B1C;
   text-align: left;
 }
 .ourclients .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
@@ -687,15 +707,16 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 
 .articles {
-  background: red;
+  background: #010000;
   padding-top: 100px;
   padding-bottom: 100px;
   min-height: 100px;
+  background: #F72B1C;
 }
 .articles .ourclients__ourarticles {
   padding-top: 50px;
@@ -715,17 +736,7 @@
   font-weight: 700;
   font-size: 50px;
   line-height: 66px;
-  color: black;
-  text-align: left;
-}
-.articles .ourclients__ourarticles .ourclients__ourarticles__headwrapper .ourclients__ourarticles__headwrapper__link {
-  display: block;
-  text-transform: uppercase;
-  font-family: Druk Wide;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: black;
+  color: #010000;
   text-align: left;
 }
 .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper {
@@ -757,7 +768,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 33px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__info {
@@ -766,7 +777,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form {
@@ -781,28 +792,30 @@
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input {
   height: 100%;
   width: 70%;
-  color: black;
+  color: #F72B1C;
   font-size: 30px;
-  background: transparent;
-  border: 3px solid black;
+  background: #010000;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border: 0px;
   padding: 2%;
   outline: none;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input::-moz-placeholder {
-  color: black;
+  color: #F72B1C;
   opacity: 20%;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input::placeholder {
-  color: black;
+  color: #F72B1C;
   opacity: 20%;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button {
   height: 60%;
   width: 20%;
-  color: red;
+  color: #F72B1C;
   font-size: 20px;
-  background: black;
-  border: 1px solid black;
+  background: #010000;
+  border: 1px solid rgb(204, 254, 15);
+  border: 0px;
 }
 
 .footer {
@@ -822,12 +835,15 @@
 .footer .footer__block1 .footer__block1__company {
   margin-bottom: 10%;
 }
+.footer .footer__block1 .footer__block1__company .footer__block1__company__logo {
+  height: 19px;
+}
 .footer .footer__block1 .footer__block1__company .footer__block1__company__info {
   font-family: Inter;
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: white;
+  color: rgb(75, 75, 75);
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials {
@@ -843,7 +859,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: red;
+  color: #010000;
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials .footer__block1__socials__wrapper {
@@ -867,7 +883,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: red;
+  color: #010000;
   text-align: left;
 }
 .footer .footer__block .footer__block__list {
@@ -878,7 +894,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: white;
+  color: rgb(75, 75, 75);
   text-align: left;
 }
 .footer .footer__bottom {
@@ -889,7 +905,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: red;
+  color: #010000;
   text-align: center;
 }
 
@@ -977,7 +993,7 @@
   }
   .ourclients__wrapper .ourclients__wrapper__textblock {
     width: 100% !important;
-    background: black !important;
+    background: rgb(204, 254, 15) !important;
     min-height: 280px !important;
     padding: 35px 45px 35px 45px !important;
     transition-duration: 0.5s;
@@ -989,20 +1005,20 @@
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__title {
     margin-bottom: 3% !important;
     font-size: 20px !important;
-    color: red !important;
+    color: #010000 !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__info {
     margin-bottom: 3% !important;
-    color: red !important;
+    color: #010000 !important;
     font-size: 19px !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__nameclient {
     margin-bottom: 0% !important;
-    color: red !important;
+    color: #010000 !important;
     font-size: 15px !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
-    color: red !important;
+    color: #010000 !important;
     font-size: 15px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
@@ -1095,7 +1111,7 @@
     width: 350px !important;
   }
   .presentation__whoweare__wrapper__textblock {
-    background: black !important;
+    background: rgb(204, 254, 15) !important;
     width: 100% !important;
     min-height: 220px !important;
     padding: 20px 30px 20px 30px !important;
@@ -1103,23 +1119,23 @@
   }
   .presentation__whoweare__wrapper__textblock:hover {
     transition-duration: 0.5s;
-    filter: drop-shadow(0px 10px 30px black);
+    filter: drop-shadow(0px 10px 30px rgba(255, 255, 255, 0.9));
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__text1 {
     font-size: 20px !important;
-    color: red !important;
+    color: #010000 !important;
     margin-bottom: 1% !important;
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__text2 {
     font-size: 13px !important;
-    color: red !important;
+    color: #010000 !important;
     margin-bottom: 1% !important;
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
-    border: 1px solid red !important;
+    border: 1px solid #010000 !important;
     margin-bottom: 20px !important;
     min-width: 50% !important;
-    color: red !important;
+    color: #010000 !important;
     font-size: 20px !important;
   }
   .selectedprojects .selectprojects__name {

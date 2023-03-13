@@ -16,13 +16,21 @@
     line-height: $lh
     color: $c
     text-align: $a
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    50%
+        transform: rotate(180deg)
+    100%
+        transform: rotate(360deg)
 $grey: rgb(75, 75, 75)
 $lightgreen: rgba(167, 255, 98, 1)
 $white: rgba(255, 255, 255, 0.9)
 $green: rgba(204, 254, 15, 1)
 $purple: rgba(163, 10, 242, 1)
-$black: rgba(17, 17, 17, 1)
+$black: #010000
 $blue: rgba(0, 87, 255, 1)
+$red:#F72B1C
 *
     padding: 0
     text-decoration: none
@@ -30,7 +38,7 @@ $blue: rgba(0, 87, 255, 1)
     margin: 0
     box-sizing: border-box
 body
-    // background: $green
+    background: $black
 
 .header
     @include flex(flex, space-between, center, row)
@@ -46,10 +54,9 @@ body
         @include flex(flex, space-between, center, row)
         .header__nav__item
             transition-duration: 0.3s
-            @include font(Inter, 400, 18px, 22px, $grey ,center)
+            @include font(Inter, 400, 18px, 22px, $red ,center)
             &:hover
-                color: $black
-                background: $grey
+                color: #850900
                 transition-duration: 0.3s
         .header__nav__item::any-link
             text-decoration: none !important
@@ -104,7 +111,7 @@ body
         width: 100%
         height: 167px
     .mainsection__info
-        @include font(Druk Wide, 700, 56px, 73px, $black, center)
+        @include font(Druk Wide, 700, 56px, 73px, $red, center)
         letter-spacing: 0.02em
         text-transform: uppercase
     .mainsection__wrapper
@@ -112,19 +119,19 @@ body
         width: 100%
         .mainsection__wrapper__button1
             width: 45%
-            @include font(Druk Wide, 700, 20px, 26px, $white, center)
+            @include font(Druk Wide, 700, 20px, 26px, $black, center)
             height: 100px
             border: 0px
-            background: $purple
+            background: $white
             text-transform: uppercase
             margin: auto
         .mainsection__wrapper__button2
             width: 45%
             margin: auto
             height: 100px
-            border: 0px
-            @include font(Druk Wide, 700, 20px, 26px, $black, center)
-            background: $white
+            border: 1px solid $white
+            @include font(Druk Wide, 700, 20px, 26px, $white, center)
+            background: transparent
             text-transform: uppercase
 .presentation
     min-height: 1800px
@@ -157,6 +164,10 @@ body
     .presentation__star
         margin-left: 60%
         margin-top: 20px
+        animation-name: rotate
+        animation-duration: 2s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
     .presentation__wedo
         width: 85%
         margin: auto
@@ -167,6 +178,7 @@ body
             .presentation__wedo__headwrapper__text1
                 @include font(Druk Wide, 700, 40px, 52px, $white, left)
                 text-transform: uppercase
+                color: $red
             .presentation__wedo__headwrapper__text2
                 display: block
                 @include font(Druk Wide, 700, 14px, 18px, $white, left)
@@ -183,6 +195,7 @@ body
                 .presentation__wedo__block1__text
                     @include font (Inter, 400, 18px, 34px, $white, left)
                     margin-top: -100%
+                    color: $red
                 .presentation__wedo__block
                     background: $blue
                     position: absolute
@@ -197,7 +210,7 @@ body
                     transition-duration: 0.5s
                     margin-bottom: 50px !important
                     &:hover
-                        background: $blue !important
+                        background: $red !important
                         transform: translateY(100px)
                         transition-duration: 0.5s
                     .presentation__wedo__block__number
@@ -217,9 +230,8 @@ body
         width: 85%
         margin: auto
         // z-index: -10
-        background: red
         .presentation__whoweare__heading
-            @include font(Druk Wide, 700, 40px, 52px, $white, left)
+            @include font(Druk Wide, 700, 40px, 52px, $red, left)
             text-transform: uppercase
         .presentation__whoweare__wrapper
             @include flex(flex, space-between, flex-end, row)
@@ -230,7 +242,7 @@ body
                 position: absolute
                 height: 100px
                 width: 100px
-                background: $lightgreen
+                background: $white
                 left: -47px
                 bottom: -47px
                 z-index: -9
@@ -240,17 +252,17 @@ body
             .presentation__whoweare__wrapper__textblock
                 width: 45%
                 .presentation__whoweare__wrapper__textblock__text1
-                    @include font(Druk Wide, 700, 24px, 44px, $white, left)
+                    @include font(Druk Wide, 700, 24px, 44px, $red, left)
                     text-transform: uppercase
                     margin-bottom: 5%
                 .presentation__whoweare__wrapper__textblock__text2
                     margin-bottom: 5%
                     @include font (Inter, 400, 18px, 34px, $white, left)
                 .presentation__whoweare__wrapper__textblock__button
-                    @include font(Druk Wide, 700, 24px, 44px, $white, center)
+                    @include font(Druk Wide, 700, 24px, 44px, $red, center)
                     width: 50%
                     background: transparent
-                    border: 1px solid $white
+                    border: 1px solid $red
                     text-transform: uppercase
                     position: relative
                     z-index: 3
@@ -272,10 +284,10 @@ body
                         transition-duration: .3s
                         left: -100%
                         width: 50%
-                        background: $white !important
+                        background: $red !important
                         z-index: -2
                     &::before
-                        background: $white !important
+                        background: $red !important
                         content: ''
                         position: absolute
                         height: 100%
@@ -293,7 +305,7 @@ body
     padding-bottom: 100px
     .selectprojects__name
         text-transform: uppercase
-        @include font(Druk Wide, 700, 56px, 52px, $black, center)
+        @include font(Druk Wide, 700, 56px, 52px, $red, center)
     .selectedprojects__wrapper
         @include flex(flex, space-between, center, row)
         margin: auto
@@ -305,33 +317,33 @@ body
             .selectedprojects__wrapper__textblock__number
                 padding-bottom: 10%
                 text-transform: uppercase
-                @include font(Druk Wide, 700, 100px, 52px, $grey, left)
-                opacity: 12%
+                @include font(Druk Wide, 700, 100px, 52px, $red, left)
+                opacity: 70%
                 transition-duration: 0.5s
                 &:hover
                     transition-duration: 0.5s
-                    opacity: 50% !important
+                    opacity: 300% !important
             .selectedprojects__wrapper__textblock__name
                 padding-bottom: 5%
                 text-transform: uppercase
-                @include font(Druk Wide, 700, 24px, 44px, $black, left)
+                @include font(Druk Wide, 700, 24px, 44px, $white, left)
             .selectedprojects__wrapper__textblock__info
                 padding-bottom: 5%
-                @include font (Inter, 400, 18px, 34px, $grey, left)
+                @include font (Inter, 400, 18px, 34px, $white, left)
             .selectedprojects__wrapper__textnlock__button
-                @include font(Druk Wide, 700, 20px, 44px, $black, center)
+                @include font(Druk Wide, 700, 20px, 44px, $red, center)
                 width: 50%
-                background: $green
-                border: 1px solid $black
+                background: transparent
+                border: 1px solid $white
+                border: 1px solid $red
                 text-transform: uppercase
                 position: relative
                 z-index: 3
                 overflow: hidden
                 &:hover
                     transition-delay: 0.1s
-                    color: $green !important
+                    color: $black !important
                     cursor: pointer
-                    border: 1px solid $black
                 &:hover::after
                     left: 0
                 &:hover::before
@@ -344,10 +356,10 @@ body
                     transition-duration: .3s
                     left: -100%
                     width: 50%
-                    background: $black !important
+                    background: $red !important
                     z-index: -1
                 &::before
-                    background: $black!important
+                    background: $red!important
                     content: ''
                     position: absolute
                     height: 100%
@@ -384,7 +396,7 @@ body
     padding-bottom: 100px
     z-index: -1
     .ourclients__name
-        @include font(Druk Wide, 700, 56px, 52px, $white, center)
+        @include font(Druk Wide, 700, 56px, 52px, $red, center)
         text-transform: uppercase
     .line
         margin: auto
@@ -438,14 +450,14 @@ body
             .ourclients__wrapper__textblock__title
                 margin-bottom: 5%
                 text-transform: uppercase
-                @include font(Druk Wide, 700, 24px, 44px, $white, left)
+                @include font(Druk Wide, 700, 24px, 44px, $red, left)
             .ourclients__wrapper__textblock__info
                 margin-bottom: 5%
                 @include font (Inter, 400, 18px, 34px, $white, left)
             .ourclients__wrapper__textblock__nameclient
                 margin-bottom: 3%
                 text-transform: uppercase
-                @include font(Druk Wide, 700, 16px, 21px, $white, left)
+                @include font(Druk Wide, 700, 16px, 21px, $red, left)
             .ourclients__wrapper__textblock__workplace
                 padding-top: 1%
                 @include font(Inter, 400, 14px, 26px, $white, left)
@@ -455,6 +467,7 @@ body
     padding-bottom: 100px
     // z-index: -10
     min-height: 100px
+    background: $red
     .ourclients__ourarticles
         padding-top: 50px
         padding-bottom: 50px
@@ -464,11 +477,7 @@ body
             margin: auto
             .ourclients__ourarticles__headwrapper__name
                 text-transform: uppercase
-                @include font(Druk Wide, 700, 50px, 66px, $white, left)
-            .ourclients__ourarticles__headwrapper__link
-                display: block
-                text-transform: uppercase
-                @include font(Druk Wide, 700, 18px, 24px, $white, left)
+                @include font(Druk Wide, 700, 50px, 66px, $black, left)
         .ourclients__ourarticles__wrapper
             @include flex(flex, space-between, flex-start, row)
             margin: auto
@@ -500,28 +509,30 @@ body
             .ourclients__ourarticles__search__form__input
                 height: 100%
                 width: 70%
-                color: $green
+                color: $red
                 font-size: 30px
-                background: transparent
-                border: 3px solid $green
+                background: $black
+                border: 3px solid $white
+                border: 0px
                 padding: 2%
                 outline: none
                 &::placeholder
-                    color: $green
+                    color: $red
                     opacity: 20%
             .ourclients__ourarticles__search__form__button
                 height: 60%
                 width: 20%
-                color: $black
+                color: $red
                 font-size: 20px
-                background: $green
+                background: $black
                 border: 1px solid $green
+                border: 0px
                 // position: relative
                 // z-index: 3
                 // overflow: hidden
                 // &:hover
                 //     transition-delay: 0.1s
-                //     color: red !important
+                //     color: $red !important
                 //     cursor: pointer
                 // &:hover::after
                 //     left: 0 !important
@@ -558,6 +569,8 @@ body
         margin-right: 150px
         .footer__block1__company
             margin-bottom: 10%
+            .footer__block1__company__logo
+                height: 19px
             .footer__block1__company__info
                 @include font(Inter, 400, 18px, 33px,$grey,left)
         .footer__block1__socials
