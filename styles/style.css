@@ -843,7 +843,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: rgb(75, 75, 75);
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials {
@@ -859,7 +859,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: #010000;
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
 .footer .footer__block1 .footer__block1__socials .footer__block1__socials__wrapper {
@@ -883,7 +883,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: #010000;
+  color: #F72B1C;
   text-align: left;
 }
 .footer .footer__block .footer__block__list {
@@ -905,7 +905,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
-  color: #010000;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
