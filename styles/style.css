@@ -6,6 +6,17 @@
   font-family: Inter;
   src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
 }
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -40,10 +51,11 @@ body {
   position: relative;
 }
 .header .header__logo {
-  height: 19px;
+  height: 50px;
+  border-radius: 7px;
 }
 .header .header__nav {
-  width: 65%;
+  width: 45%;
   min-height: 30px;
   display: flex;
   justify-content: space-between;
@@ -56,7 +68,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #F72B1C;
+  color: #aaaaaa;
   text-align: center;
 }
 .header .header__nav .header__nav__item:hover {
@@ -133,22 +145,25 @@ body {
 
 .mainsection {
   width: 85%;
-  height: 600px;
+  height: 700px;
   margin: auto;
 }
 .mainsection .mainsection__heading {
   width: 100%;
-  height: 167px;
+  max-height: 167px;
 }
 .mainsection .mainsection__info {
   font-family: Druk Wide;
   font-weight: 700;
   font-size: 56px;
   line-height: 73px;
-  color: #F72B1C;
+  color: white;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  -webkit-text-stroke-color: white;
 }
 .mainsection .mainsection__wrapper {
   display: flex;
@@ -166,15 +181,50 @@ body {
   color: #010000;
   text-align: center;
   height: 100px;
-  border: 0px;
-  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid white;
+  cursor: pointer;
+  background: transparent;
   text-transform: uppercase;
   margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.mainsection .mainsection__wrapper .mainsection__wrapper__button1::before {
+  content: "";
+  left: 0;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  transition-duration: 0.3s;
+  background: white;
+  z-index: -1;
+  position: absolute;
+}
+.mainsection .mainsection__wrapper .mainsection__wrapper__button1::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: white;
+  transition-duration: 0.3s;
+  z-index: -1;
+  position: absolute;
+}
+.mainsection .mainsection__wrapper .mainsection__wrapper__button1:hover {
+  color: white !important;
+}
+.mainsection .mainsection__wrapper .mainsection__wrapper__button1:hover::after {
+  left: -100%;
+}
+.mainsection .mainsection__wrapper .mainsection__wrapper__button1:hover::before {
+  left: 100%;
 }
 .mainsection .mainsection__wrapper .mainsection__wrapper__button2 {
   width: 45%;
   margin: auto;
   height: 100px;
+  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.9);
   font-family: Druk Wide;
   font-weight: 700;
@@ -235,10 +285,14 @@ body {
 .presentation .presentation__star {
   margin-left: 60%;
   margin-top: 20px;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .presentation .presentation__wedo {
   width: 85%;
@@ -375,8 +429,9 @@ body {
   content: "";
   position: absolute;
   height: 100px;
+  border-radius: 50%;
   width: 100px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #474747;
   left: -47px;
   bottom: -47px;
   z-index: -9;
@@ -792,15 +847,18 @@ body {
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input {
   height: 100%;
   width: 70%;
+  border: 3px solid white;
   color: #F72B1C;
   font-size: 30px;
   background: #010000;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  border: 0px;
   padding: 2%;
   outline: none;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input::-moz-placeholder {
+  color: #F72B1C;
+  opacity: 20%;
+}
+.articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__input:-ms-input-placeholder {
   color: #F72B1C;
   opacity: 20%;
 }
@@ -809,11 +867,16 @@ body {
   opacity: 20%;
 }
 .articles .ourclients__ourarticles__search .ourclients__ourarticles__search__form .ourclients__ourarticles__search__form__button {
-  height: 60%;
-  width: 20%;
+  position: relative;
+  padding: 20px 130px;
   color: #F72B1C;
   font-size: 20px;
-  background: #010000;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-family: Druk Wide;
+  font-size: 25px;
+  font-weight: 1000;
   border: 1px solid rgb(204, 254, 15);
   border: 0px;
 }
@@ -928,7 +991,7 @@ body {
 }
 @media screen and (max-width: 1300px) {
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 370px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1022,7 +1085,7 @@ body {
     font-size: 15px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 330px !important;
   }
 }
@@ -1058,8 +1121,8 @@ body {
     text-align: center;
   }
   .selectedprojects__wrapper .selectedprojects__pictures1,
-  .selectedprojects__wrapper .selectedprojects__pictures2,
-  .selectedprojects__wrapper .selectedprojects__pictures3 {
+.selectedprojects__wrapper .selectedprojects__pictures2,
+.selectedprojects__wrapper .selectedprojects__pictures3 {
     width: 38% !important;
     height: 30% !important;
     margin-left: 20px !important;
@@ -1067,13 +1130,13 @@ body {
     background-repeat: no-repeat !important;
   }
   .selectedprojects__wrapper .selectedprojects__pictures__addimg,
-  .selectedprojects__wrapper .selectedprojects__pictures__img {
+.selectedprojects__wrapper .selectedprojects__pictures__img {
     transform: translate(150%, 0px) !important;
     max-height: 376px !important;
     width: 100% !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 300px !important;
   }
 }
@@ -1091,7 +1154,7 @@ body {
     font-size: 40px !important;
   }
   .mainsection .mainsection__wrapper__button1,
-  .mainsection .mainsection__wrapper__button2 {
+.mainsection .mainsection__wrapper__button2 {
     font-size: 17px !important;
     height: 80px !important;
   }
@@ -1109,6 +1172,7 @@ body {
   }
   .presentation__whoweare__wrapper .presentation__whoweare__wrapper__img {
     width: 350px !important;
+    border-radius: 20px !important;
   }
   .presentation__whoweare__wrapper__textblock {
     background: rgb(204, 254, 15) !important;
@@ -1197,7 +1261,7 @@ body {
     font-size: 33px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 260px !important;
   }
 }
@@ -1225,7 +1289,7 @@ body {
 }
 @media screen and (max-width: 880px) {
   .presentation__wedo__headwrapper__text1,
-  .presentation__whoweare__heading {
+.presentation__whoweare__heading {
     font-size: 30px !important;
   }
   .presentation__wedo__headwrapper__text2 {
@@ -1260,7 +1324,7 @@ body {
     width: 100% !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 230px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1308,7 +1372,7 @@ body {
     height: 90px !important;
   }
   .mainsection .mainsection__wrapper__button1,
-  .mainsection .mainsection__wrapper__button2 {
+.mainsection .mainsection__wrapper__button2 {
     font-size: 14px !important;
     height: 70px !important;
   }
@@ -1373,7 +1437,7 @@ body {
     padding-bottom: 50px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 200px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1474,15 +1538,15 @@ body {
     font-size: 17px !important;
   }
   .selectedprojects__pictures1,
-  .selectedprojects__pictures2,
-  .selectedprojects__pictures3 {
+.selectedprojects__pictures2,
+.selectedprojects__pictures3 {
     margin-top: -50px !important;
   }
   .ourclients {
     padding-bottom: 30px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 170px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1525,7 +1589,7 @@ body {
 }
 @media screen and (max-width: 599px) {
   .presentation__wrapper__text1,
-  .presentation__wrapper__text2 {
+.presentation__wrapper__text2 {
     font-size: 16px !important;
   }
 }
@@ -1540,7 +1604,7 @@ body {
     font-size: 20px !important;
   }
   .mainsection .mainsection__wrapper__button1,
-  .mainsection .mainsection__wrapper__button2 {
+.mainsection .mainsection__wrapper__button2 {
     height: 60px !important;
   }
   .selectedprojects {
@@ -1606,7 +1670,7 @@ body {
     height: 60px !important;
   }
   .mainsection .mainsection__wrapper__button1,
-  .mainsection .mainsection__wrapper__button2 {
+.mainsection .mainsection__wrapper__button2 {
     font-size: 12px !important;
     height: 50px !important;
   }
@@ -1625,15 +1689,15 @@ body {
     font-size: 14px !important;
   }
   .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__text1,
-  .presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
+.presentation__whoweare__wrapper__textblock .presentation__whoweare__wrapper__textblock__button {
     font-size: 15px !important;
   }
   .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock .selectedprojects__wrapper__textblock__info {
     line-height: 20px !important;
   }
   .selectedprojects .selectedprojects__wrapper .selectedprojects__pictures1,
-  .selectedprojects .selectedprojects__wrapper .selectedprojects__pictures2,
-  .selectedprojects .selectedprojects__wrapper .selectedprojects__pictures3 {
+.selectedprojects .selectedprojects__wrapper .selectedprojects__pictures2,
+.selectedprojects .selectedprojects__wrapper .selectedprojects__pictures3 {
     margin-top: -80px !important;
   }
   .ourclients {
@@ -1643,7 +1707,7 @@ body {
     margin-top: 0px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 130px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1697,7 +1761,7 @@ body {
     height: 50px !important;
   }
   .mainsection .mainsection__wrapper__button1,
-  .mainsection .mainsection__wrapper__button2 {
+.mainsection .mainsection__wrapper__button2 {
     font-size: 10px !important;
     height: 40px !important;
   }
@@ -1705,7 +1769,7 @@ body {
     padding-top: 50px;
   }
   .presentation .presentation__wrapper__text1,
-  .presentation .presentation__wrapper__text2 {
+.presentation .presentation__wrapper__text2 {
     font-size: 14px !important;
   }
   .presentation__wedo {
@@ -1742,14 +1806,14 @@ body {
     font-size: 12px !important;
   }
   .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__nameclient,
-  .ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
+.ourclients__wrapper .ourclients__wrapper__textblock .ourclients__wrapper__textblock__workplace {
     font-size: 10px !important;
   }
   .ourclients {
     padding-bottom: 0px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 110px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1823,7 +1887,7 @@ body {
     font-size: 13px !important;
   }
   .presentation__wrapper__text1,
-  .presentation__wrapper__text2 {
+.presentation__wrapper__text2 {
     font-size: 12px !important;
   }
   .selectedprojects {
@@ -1848,7 +1912,7 @@ body {
     font-size: 13px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg1,
-  .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
+.articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__backimg2 {
     height: 100px !important;
   }
   .articles .ourclients__ourarticles .ourclients__ourarticles__wrapper .ourclients__ourarticles__wrapper__block .ourclients__ourarticles__wrapper__block__name {
@@ -1860,7 +1924,7 @@ body {
 }
 @media screen and (max-width: 390px) {
   .presentation__wedo__headwrapper__text1,
-  .presentation__whoweare__heading {
+.presentation__whoweare__heading {
     font-size: 20px !important;
   }
   .selectedprojects .selectedprojects__wrapper .selectedprojects__wrapper__textblock {
@@ -1903,4 +1967,19 @@ body {
   .ourclients__ourarticles__headwrapper__name {
     font-size: 11px !important;
   }
+}
+.block1_undo {
+  background: #F72B1C !important;
+  transform: translateY(100px);
+  transition-duration: 0.5s;
+}
+
+.ourclients__ourarticles__search__form__button::after {
+  content: "";
+  height: 100%;
+  bottom: -13px;
+  right: -13px;
+  position: absolute;
+  width: 100%;
+  border: 2px solid white;
 }/*# sourceMappingURL=style.css.map */
